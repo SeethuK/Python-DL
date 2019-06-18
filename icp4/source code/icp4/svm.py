@@ -14,7 +14,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(df1, y, test_size=0.1)
 
 
 # SVM
-svc = SVC()
+svc = LinearSVC(random_state=0, tol=1e-5)
 svc.fit(X_train, Y_train)
 # training the model by providing the test and train data
 Y_pred = svc.predict(X_test)
